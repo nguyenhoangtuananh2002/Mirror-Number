@@ -1,0 +1,18 @@
+#include "stdio.h"
+#include "io.h"
+#include "system.h"
+int main(){
+	int a = 11 &0xff;
+	int y;
+	IOWR(MIRORNUMBER_0_BASE, 0, a);
+
+	y = IORD(MIRORNUMBER_0_BASE, 1);
+	printf("%d\n",y);
+	if(y){
+		printf("dung");
+	}
+	else {
+		printf("sai");
+	}
+return 0;
+}

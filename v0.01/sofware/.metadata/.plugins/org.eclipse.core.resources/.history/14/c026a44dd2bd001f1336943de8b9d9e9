@@ -1,0 +1,21 @@
+/*
+ * source.c
+ *
+ *  Created on: Dec 19, 2024
+ *      Author:
+ */
+#include "stdio.h"
+#include "io.h"
+#include "system.h"
+int main(){
+	int a = 22 &0xff;
+	int y;
+	IOWR(MIRORNUMBER_0_BASE, 0, a);
+
+	y = IORD(COMPUTE_0_BASE, 3);
+	printf("y = %d*x + %d = %d, x = %d\n", a, b, y, x );
+return 0;
+}
+
+
+
